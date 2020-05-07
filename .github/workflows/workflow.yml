@@ -1,0 +1,31 @@
+name: v2-SimpleNameTag Build
+
+on: [create, push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        java: ['8', '11', '12']
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Set up Java ${{ matrix.java }}
+        uses: actions/setup-java@v1
+        with:
+          java-version: ${{ matrix.java }}
+          architecture: x64
+      - name: Build with Maven
+        run: mvn clean test package
+      - name: Repackage with Maven
+        run: mvn package
+      - name: Release ZIP
+        run: |
+          mkdir -p temp;
+          cp SimpleNameTagPlugin/target/*.jar temp/;
+          cp SimpleNameTagCore/target/*.jar temp/;
+      - uses: actions/upload-artifact@master
+        with:
+          name: v2-SimpleNameTag
+          path: temp/
