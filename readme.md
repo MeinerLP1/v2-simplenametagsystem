@@ -18,7 +18,7 @@ This is the SimpleNametag System for CloudNet 2.2.0
 
  ### Support
  
-  * Spigot-Support » 1.7.10 - 1.14
+  * Spigot-Support » 1.8 - 1.15.X
     * PaperSpigot
     
 ### Discord
