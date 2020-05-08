@@ -18,8 +18,6 @@ jobs:
           architecture: x64
       - name: Build with Maven
         run: mvn clean test package
-      - name: Repackage with Maven
-        run: mvn package
       - name: Release ZIP
         run: |
           mkdir -p temp;
