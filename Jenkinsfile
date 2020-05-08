@@ -51,7 +51,7 @@ pipeline {
   post {
     always {
       withCredentials([string(credentialsId: 'cloudnet-discord-ci-webhook', variable: 'url')]) {
-        discordSend description: 'New build for SignSystem!', footer: 'New build!', link: env.BUILD_URL, successful: currentBuild.resultIsBetterOrEqualTo('SUCCESS'), title: JOB_NAME, webhookURL: url
+        discordSend description: 'New build for SimpleNameTag System!', footer: 'New build!', link: env.BUILD_URL, successful: currentBuild.resultIsBetterOrEqualTo('SUCCESS'), title: JOB_NAME, webhookURL: url
       }
     }
   }
