@@ -37,8 +37,7 @@ pipeline {
     stage('Release ZIP') {
       steps {
         sh '''mkdir -p temp;
-        cp SimpleNameTagPlugin/target/*.jar temp/;
-        cp SimpleNameTagCore/target/*.jar temp/;'''
+        cp SimpleNameTagPlugin/target/*.jar temp/;'''
         zip archive: true, dir: 'temp', glob: '', zipFile: 'SimpleNameTag.zip'
         sh 'rm -r temp/';
       }

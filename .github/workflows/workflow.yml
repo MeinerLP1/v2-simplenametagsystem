@@ -24,7 +24,6 @@ jobs:
         run: |
           mkdir -p temp;
           cp SimpleNameTagPlugin/target/*.jar temp/;
-          cp SimpleNameTagCore/target/*.jar temp/;
       - uses: actions/upload-artifact@master
         with:
           name: v2-SimpleNameTag
