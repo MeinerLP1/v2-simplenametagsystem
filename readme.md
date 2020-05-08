@@ -37,13 +37,6 @@ Maven:
 </repositories>
 
 <dependencies>
-    <!-- Core of the SimpleNameTag System -->
-    <dependency>
-        <groupId>eu.cloudnetservice</groupId>
-        <artifactId>SimpleNameTagCore</artifactId>
-        <version>1.0-SNAPSHOT</version>
-        <scope>provided</scope>
-    </dependency>
     <!-- Spigot -->
     <dependency>
         <groupId>eu.cloudnetservice</groupId>
