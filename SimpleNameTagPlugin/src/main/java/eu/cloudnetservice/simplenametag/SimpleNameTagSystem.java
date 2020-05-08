@@ -16,9 +16,18 @@ public class SimpleNameTagSystem {
 
     private static SimpleNameTagSystem simpleNameTagSystem = new SimpleNameTagSystem();
 
+    /**
+     * Get a simple instance of the simple name tag system.
+     *
+     * @return the instance self.
+     */
+    public static SimpleNameTagSystem getSimpleNameTagSystem() {
+        return simpleNameTagSystem;
+    }
 
     /**
      * Update for bukkit player the name tag.
+     *
      * @param player the player to set the name tag.
      */
     public void updateNameTags(Player player) {
@@ -27,7 +36,8 @@ public class SimpleNameTagSystem {
 
     /**
      * Update for bukkit player the name tag.
-     * @param player the player to set the name tag.
+     *
+     * @param player                        the player to set the name tag.
      * @param playerPermissionGroupFunction a function to find the right permission group of the player to set the name tag.
      */
     public void updateNameTags(Player player, Function<Player, PermissionGroup> playerPermissionGroupFunction) {
@@ -36,8 +46,9 @@ public class SimpleNameTagSystem {
 
     /**
      * Update for bukkit player the name tag.
-     * @param player the player to set the name tag.
-     * @param playerPermissionGroupFunction a function to find the right permission group of the player to set the name tag.
+     *
+     * @param player                                the player to set the name tag.
+     * @param playerPermissionGroupFunction         a function to find the right permission group of the player to set the name tag.
      * @param allOtherPlayerPermissionGroupFunction a function to find the right permission group of other players to set the name tag.
      */
     public void updateNameTags(Player player,
@@ -79,6 +90,7 @@ public class SimpleNameTagSystem {
 
     /**
      * Set a player they have no scoreboard a new one.
+     *
      * @param player they have no scoreboard.
      */
     private void initScoreboard(Player player) {
@@ -89,8 +101,9 @@ public class SimpleNameTagSystem {
 
     /**
      * Add a player to a team entry.
-     * @param target the player to added to the team.
-     * @param all players to update the scoreboard and the team.
+     *
+     * @param target          the player to added to the team.
+     * @param all             players to update the scoreboard and the team.
      * @param permissionGroup the group to get prefix and suffix from.
      */
     private void addTeamEntry(Player target, Player all, PermissionGroup permissionGroup) {
@@ -150,13 +163,5 @@ public class SimpleNameTagSystem {
         team.addEntry(target.getName());
 
         target.setDisplayName(ChatColor.translateAlternateColorCodes('&', permissionGroup.getDisplay() + target.getName()));
-    }
-
-    /**
-     * Get a simple instance of the simple name tag system.
-     * @return the instance self.
-     */
-    public static SimpleNameTagSystem getSimpleNameTagSystem() {
-        return simpleNameTagSystem;
     }
 }
