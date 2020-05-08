@@ -1,9 +1,12 @@
-main: eu.cloudnetservice.simplenametag.SimpleNameTagPlugin
-api-version: 1.13
-version: ${nametag.version}
-author: TheMeinerLP
-depend: [CloudNetAPI]
-description: CloudNet SimpleNameTagSystem for the Central server
-website: https://cloudnetservice.eu/
 name: SimpleNameTag
+main: eu.cloudnetservice.simplenametag.SimpleNameTagPlugin
+version: ${nametag.version}
+
+api-version: 1.13
+author: TheMeinerLP
+
+depend: [CloudNetAPI]
+
+description: CloudNet SimpleNameTagSystem
+website: https://cloudnetservice.eu/
 
