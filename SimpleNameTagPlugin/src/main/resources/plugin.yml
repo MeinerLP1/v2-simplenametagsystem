@@ -3,7 +3,7 @@ main: eu.cloudnetservice.simplenametag.SimpleNameTagPlugin
 version: ${nametag.version}
 
 api-version: 1.13
-author: TheMeinerLP
+author: CloudNetService
 
 depend: [CloudNetAPI]
 

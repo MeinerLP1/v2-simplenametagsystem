@@ -67,12 +67,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <dependency>
-            <groupId>net.md-5</groupId>
-            <artifactId>bungeecord-bootstrap</artifactId>
-            <version>${dependency.bungeecord.version}</version>
-            <scope>provided</scope>
-        </dependency>
     </dependencies>
 
 

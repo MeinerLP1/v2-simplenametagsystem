@@ -23,7 +23,6 @@
 
         <dependency.cloudnet.version>2.1.17</dependency.cloudnet.version>
         <dependency.spigot.version>1.8.8-R0.1-SNAPSHOT</dependency.spigot.version>
-        <dependency.bungeecord.version>1.8-1.12</dependency.bungeecord.version>
     </properties>
 
 </project>
