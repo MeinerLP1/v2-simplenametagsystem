@@ -29,14 +29,6 @@ pipeline {
         sh 'mvn package'
       }
     }
-    stage('Release ZIP') {
-      steps {
-        sh '''mkdir -p temp;
-        cp SimpleNameTagPlugin/target/*.jar temp/;'''
-        zip archive: true, dir: 'temp', glob: '', zipFile: 'SimpleNameTag.zip'
-        sh 'rm -r temp/';
-      }
-    }
     stage('Archive') {
       steps {
         archiveArtifacts allowEmptyArchive: true, artifacts: '**/target/SimpleNameTag*.jar', fingerprint: true, onlyIfSuccessful: true
